@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jacky's Zombie Game</title>
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+</head>
+
+<body>
+    <img src="images/zombie.png" id="zombie">
+    <img src="images/zombie.png" id="zombie2">
+    <p>Your score:</p>
+    <p id="score">0</p>
+    <div><button id="endgame">End the game</button></div>
+    <script>
+        let zombie = document.getElementById("zombie");
+        let zombie2 = document.getElementById("zombie2");
+        let score = document.getElementById("score")
+        let counter = 0;
+
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let initial_width = Math.floor(Math.random() * (width - 200));
+        let initial_height = Math.floor(Math.random() * (height - 200));
+        zombie.style.top = initial_height + "px";
+        zombie.style.left = initial_width + "px";
+
+        let initial_width2 = Math.floor(Math.random() * (width - 200));
+        let initial_height2 = Math.floor(Math.random() * (height - 200));
+        zombie2.style.top = initial_height2 + "px";
+        zombie2.style.left = initial_width2 + "px";
+
+        function random_spawn() {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            zombie.src = "images/zombie.png";
+            let new_width = Math.floor(Math.random() * (width - 200));
+            let new_height = Math.floor(Math.random() * (height - 200));
+            zombie.style.top = new_height + "px";
+            zombie.style.left = new_width + "px";
+        }
+
+        function random_spawn2() {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            zombie2.src = "images/zombie.png";
+            let new_width2 = Math.floor(Math.random() * (width - 200));
+            let new_height2 = Math.floor(Math.random() * (height - 200));
+            zombie2.style.top = new_height2 + "px";
+            zombie2.style.left = new_width2 + "px";
+        }
+
+        function death() {
+            counter += 1;
+            score.innerHTML = counter;
+            zombie.src = "images/explosion.gif";
+            let sound = new Audio("src/zombie_sound.mp3")
+            sound.play()
+        }
+
+        function death2() {
+            counter += 1;
+            score.innerHTML = counter;
+            zombie2.src = "images/explosion.gif";
+            let sound = new Audio("src/zombie_sound.mp3")
+            sound.play()
+        }
+
+        function end() {
+            score.innerHTML = 0;
+            counter = 0
+            zombie.style.top = initial_height + "px";
+            zombie.style.left = initial_width + "px";
+            zombie2.style.top = initial_height2 + "px";
+            zombie2.style.left = initial_width2 + "px";
+        }
+
+        zombie.onclick = death
+        zombie2.onclick = death2
+        setInterval(random_spawn, 2000)
+        setInterval(random_spawn2, 2000)
+        document.getElementById("endgame").onclick = end
+    </script>
+</body>
+
+</html>
