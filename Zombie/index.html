@@ -53,7 +53,9 @@
         }
 
         function death() {
-            counter += 1;
+            if (zombie.getAttribute("src") == "images/zombie.png") {
+                counter += 1;
+            }
             score.innerHTML = counter;
             zombie.src = "images/explosion.gif";
             let sound = new Audio("src/zombie_sound.mp3")
@@ -61,7 +63,9 @@
         }
 
         function death2() {
-            counter += 1;
+            if (zombie2.getAttribute("src") == "images/zombie.png") {
+                counter += 1;
+            }
             score.innerHTML = counter;
             zombie2.src = "images/explosion.gif";
             let sound = new Audio("src/zombie_sound.mp3")
