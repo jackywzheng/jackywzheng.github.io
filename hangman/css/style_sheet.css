@@ -1,0 +1,61 @@
+body {
+  background-color: black;
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: white;
+  height:100%;
+  text-align:center;
+  font-size:18px;
+}
+
+
+button{
+  background-color: rgba(0, 0, 0, 0);
+  color: red;
+  border: 2px solid red;
+  padding: 4px 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 16px;
+  
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  z-index: 100;
+}
+
+button:hover:not([disabled]) {
+  color: yellow;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  transform: translateY(-3px);
+}     
+button:active:not([disabled]) {
+  transform: translateY(6px);
+  background-color: red;
+  color: black;
+}
+button:disabled{
+  border-color: black;
+  background-color: rgba(255, 1, 1, 0.2);
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  /* transform: translateY(25px); */
+}
+
+#score, #lives, #guess {
+  text-align: center;
+  color: orangered;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  z-index: 999;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#score:hover, #lives:hover, #guess:hover{
+  color: yellow;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
