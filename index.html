@@ -7,6 +7,7 @@
     </title>
     <style>
         div {
+            position: absolute;
             text-align: left;
             vertical-align: middle;
         }
@@ -28,10 +29,14 @@
         }
 
         #comic {
+            position: static;
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 40%;
+        }
+        p {
+            position: fixed;
         }
     </style>
 </head>
@@ -42,7 +47,7 @@
         program. I studied biology at York University and served in
         the Canadian Army as an infantryman. My hobbies include working out, gaming, and eating at new places.</p>
     <a href="resume.html">Resume</a>
-    <div>
+    <div id='div1'>
         <dl>
             <a href="https://www.bcit.ca/study/outlines/20191086134">
                 <dt>COMP 1930 Projects 1</dt>
