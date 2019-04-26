@@ -13,8 +13,12 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+    <script src="jquery-3.3.1.min.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
   </head>
+
   <body class="is-preload">
     <!-- Page Wrapper -->
     <div id="page-wrapper">
@@ -31,11 +35,12 @@
         <div class="inner">
           <h2>Menu</h2>
           <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="generic.html">Generic</a></li>
-            <li><a href="elements.html">Elements</a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Get in Touch</a></li>
           </ul>
           <a href="#" class="close">Close</a>
         </div>
@@ -43,8 +48,8 @@
 
       <!-- Banner -->
       <section id="banner">
-        <div class="inner">
-          <div class="logo"><span class="icon fa-diamond"></span></div>
+        <div class="inner" id="home">
+          <div class="logo"><span class="icon fa-code"></span></div>
           <h2>Hello world! I'm Jacky Zheng</h2>
           <p>BCIT CST Student and aspiring Software Developer</p>
         </div>
@@ -54,7 +59,7 @@
       <section id="wrapper">
         <!-- One -->
         <section id="one" class="wrapper spotlight style1">
-          <div class="inner">
+          <div class="inner" id="aboutme">
             <a class="image"><img src="images/me.png" alt=""/></a>
             <div class="content">
               <h2 class="major">About me</h2>
@@ -73,8 +78,8 @@
 
         <!-- Two -->
         <section id="two" class="wrapper alt spotlight style2">
-          <div class="inner">
-            <a href="#" class="image"><img src="images/pic02.jpg" alt=""/></a>
+          <div class="inner" id="technologies">
+            <a class="image"><img src="images/pic02.jpg" alt=""/></a>
             <div class="content">
               <h2 class="major">Technologies</h2>
               <ul>
@@ -89,10 +94,10 @@
 
         <!-- Three -->
         <section id="three" class="wrapper spotlight style3">
-          <div class="inner">
+          <div class="inner" id="experience">
             <a class="image"><img src="images/pic03.jpg" alt=""/></a>
             <div class="content">
-              <h2 class="major">Work history</h2>
+              <h2 class="major">Experience</h2>
               <p>
                 Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras
                 turpis ante, nullam sit amet turpis non, sollicitudin posuere
@@ -106,7 +111,7 @@
 
         <!-- Four -->
         <section id="four" class="wrapper alt style1">
-          <div class="inner">
+          <div class="inner" id="projects">
             <h2 class="major">Personal projects</h2>
             <p>
               Here are some of my personal projects that I've worked on.
@@ -124,7 +129,12 @@
                   groups and meet up to buy groceries together to reduce food
                   waste and save money.
                 </p>
-                <a href="#" class="special">Learn more</a>
+                <a
+                  href="https://github.com/jackywzheng/Grocer-Together"
+                  class="special"
+                >
+                  Learn more</a
+                >
               </article>
               <article>
                 <a href="https://jackyzheng.me/hangman/" class="image"
@@ -135,7 +145,9 @@
                   Hangman game made with HTML/CSS/Javscript with Firebase
                   high-score functionality.
                 </p>
-                <a href="#" class="special">Learn more</a>
+                <a href="https://github.com/jackywzheng/Hangman" class="special"
+                  >Learn more</a
+                >
               </article>
               <article>
                 <a href="#" class="image"
@@ -157,7 +169,11 @@
                 <p>
                   A simple, but spooky zombie game made with JavaScript.
                 </p>
-                <a href="#" class="special">Learn more</a>
+                <a
+                  href="https://github.com/jackywzheng/jackywzheng.github.io/tree/master/Zombie"
+                  class="special"
+                  >Learn more</a
+                >
               </article>
             </section>
             <ul class="actions">
@@ -169,7 +185,7 @@
 
       <!-- Footer -->
       <section id="footer">
-        <div class="inner">
+        <div class="inner" id="contact">
           <h2 class="major">Get in touch</h2>
           <p></p>
           <form method="post" action="#">
@@ -198,7 +214,12 @@
             </li>
             <li class="fa-linkedin">
               <a href="https://www.linkedin.com/in/jacky-zheng-6a81226a/">
-                https://www.linkedin.com/in/jacky-zheng-6a81226a/
+                linkedin.com/in/jacky-zheng-6a81226a/
+              </a>
+            </li>
+            <li class="fa-github">
+              <a href="https://github.com/jackywzheng">
+                github.com/jackywzheng
               </a>
             </li>
           </ul>
@@ -216,5 +237,18 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      $('a[href*="#"]').on("click", function(e) {
+        e.preventDefault();
+
+        $("html, body").animate(
+          {
+            scrollTop: $($(this).attr("href")).offset().top
+          },
+          800,
+          "linear"
+        );
+      });
+    </script>
   </body>
 </html>
