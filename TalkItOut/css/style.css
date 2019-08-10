@@ -1,0 +1,98 @@
+html, body {
+    height: 100vh;
+    font-family: 'Baloo Paaji', cursive;
+}
+
+#bg {
+    background: url(../images/bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: white;
+}
+
+b {
+    font-size: 1.5em;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.container {
+    padding: 10rem 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container h1 {
+    color: rgb(38, 189, 138);
+    font-size: 10rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: 5px 5px rgb(70, 151, 111);
+    text-align: center;
+}
+
+.btn-success {
+    background-color: rgb(38, 189, 138);
+    border-color: rgb(38, 189, 138);
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #13dda0;
+    border-color: #13dda0;
+}
+
+#section-two {
+    background-color: #484550;
+    color: white;
+}
+
+.whoAreWe {
+    color: black;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+}
+
+.stageButton {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+}
+
+.question {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+label {
+    font-size: 1.15em;
+    margin-left: 11px;
+    margin-right: 11px;
+}
+
+p.question {
+    margin: 20px;
+    color: black;
+}
+
+.question-answer {
+    text-align: center;
+}
+
+.modal-footer {
+    padding-bottom: -50px;
+}

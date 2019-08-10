@@ -1,0 +1,26 @@
+.title {
+    color: black;
+    margin-top: -7rem;
+    margin-bottom: -15rem;
+
+}
+
+.card {
+    border: 0px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.specialty {
+    list-style-type: none;
+}
+
+li {
+    font-weight: 200;
+}
+
+.listeners {
+    padding-top: -10rem;
+}

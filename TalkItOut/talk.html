@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Talk It Out Video Channel</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://simple-website-talkitoutdev.mybluemix.net/index.html"><img src="images/talkitout_logo.png" alt="talk it out logo image" height="26"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar-inner justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://simple-website-talkitoutdev.mybluemix.net/index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </div>
+        </nav>
+<form id="form">
+    <div class="custom-container container">
+        <div class="row">
+            <div class="custom-row-container">
+                <div class="row">
+                    <div class="col-ms">
+                        <div class="card custom-card">
+                            <div class="form-group bmd-form-group">
+                                <button id="join" type="button" class="btn btn-raised btn-success">
+                                    JOIN
+                                </button>
+                                <button id="leave" type="button" class="btn btn-raised btn-success">
+                                    LEAVE
+                                </button>
+                                <button id="mute" type="button" class="btn btn-raised btn-success">
+                                    MUTE
+                                </button>
+                                <button id="unmute" type="button" class="btn btn-raised btn-success">
+                                    UNMUTE
+                                </button>
+                                <button id="enable" type="button" class="btn btn-raised btn-success">
+                                    ENABLE CAMERA
+                                </button>
+                                <button id="disable" type="button" class="btn btn-raised btn-success">
+                                    DISABLE CAMERA
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-grid" id="video">
+                            <div id="local_stream" class="video-placeholder">
+                                <div id="local_video_info" class="video-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/toastify.js"></script>
+<script src="js/bootstrap-material-design.min.js"></script>
+<script src="js/AgoraRTCSDK-2.8.0.js"></script>
+<script src="js/common.js"></script>
+<script src="js/video.js"></script>
+</body>
+
+</html>
