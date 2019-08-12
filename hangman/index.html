@@ -8,13 +8,26 @@
     <title>F Hang Man</title>
     <link type="text/css" rel="stylesheet" href="css\style_sheet.css" />
     <style>
-        p {
-            font-size: 20px
-        }
+
     </style>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC1iJgM6rmGZi7WNg8jU1N3zzFA23iWGrk",
+            authDomain: "hangman-leaderboard-31fef.firebaseapp.com",
+            databaseURL: "https://hangman-leaderboard-31fef.firebaseio.com",
+            projectId: "hangman-leaderboard-31fef",
+            storageBucket: "hangman-leaderboard-31fef.appspot.com",
+            messagingSenderId: "473287303688"
+        };
+        firebase.initializeApp(config);
+    </script>
 </head>
 
 <body>
+    <div id="copyright"><p>made by Jacky, Trung, Theoren, and Shih-Hung</p></div>
     <div id="gameover"></div>
     <div id='display'></div>
     <div id="buttons">
@@ -31,12 +44,10 @@
         <p id="definition"></p>
     </div>
 
-    <div id="gameover"></div>
-
-    <div id='display'></div>
     <div id='restart'></div>
+
+
     <script src="js\hangman.js"></script>
-
+    <!-- <div id='displayBoard'></div> -->
 </body>
-
 </html>
